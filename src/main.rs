@@ -19,3 +19,8 @@ fn add_employee(name: String, listado: &mut Vec<String>) -> &Vec<String> {
     listado.push(name);
     listado
 }
+
+fn get_department_employees(department_name: String, map: &HashMap<String,Vec<String>> ) -> &Vec<String> {
+    let department_employees = map.get(&department_name).expect("El departamento no existe");
+    department_employees
+}
